@@ -1,4 +1,10 @@
+import Loader from "react-loaders";
+
 const Contact = () => {
-    <h1>hello</h1>
+    return (
+        <>
+            <Loader type="pacman" />
+        </>
+    )
 }
 export default Contact;

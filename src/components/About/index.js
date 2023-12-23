@@ -2,8 +2,9 @@ import './index.scss'
 import AnimatedLetters from '../AnimatedLetters';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngular, faCss3, faGithub, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
+import { faCss3, faGithub, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
 import Loader from 'react-loaders';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -15,7 +16,7 @@ const About = () => {
     }, []);
     return (
         <>
-            <div className='container about-page'>
+            <div className='contain about-page'>
                 <div className='text-zone'>
                     <h1>
                         <AnimatedLetters letterClass={letterClass} strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']} idx={15} />
@@ -24,7 +25,7 @@ const About = () => {
                         I am Johann B Simon, an aspiring Software Engineer studying Computer Science and Engineering at National Institute of Technology, Calicut.
                     </p>
                     <p>
-                        My tech stack includes HTML, CSS, React, NodeJS and more.
+                        My tech stack includes HTML, CSS, React, NodeJS, Git and more.
                     </p>
                     <p>
                         I am also interested in competitive programming and have included the link to my LeetCode account in the sidebar.
@@ -33,7 +34,7 @@ const About = () => {
                 <div className='stage-cube-cont'>
                     <div className='cubespinner'>
                         <div className='face1'>
-                            <FontAwesomeIcon icon={faAngular} color="#DD0031" />
+                            <FontAwesomeIcon icon={faCode} color="#DD0031" />
                         </div>
                         <div className='face2'>
                             <FontAwesomeIcon icon={faHtml5} color="#F06529" />
