@@ -1,0 +1,126 @@
+.container-game {
+    position: absolute;
+    top: 70px;
+    right: 200px;
+    width: 300px;
+    height: 400px;
+    opacity: 0;
+
+    &:hover {
+        animation: fadeIn 5s forwards;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+.board {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.tile {
+    text-align: center;
+    padding-top: 33px;
+    color: #c2baba;
+    font-size: 2em;
+}
+
+.right-border {
+    border-right: 0.2em solid #0074a6;
+}
+
+.bottom-border {
+    border-bottom: 0.2em solid #0074a6;
+}
+
+.x-hover:hover::after {
+    content: "X";
+    opacity: 0.4;
+}
+
+.o-hover:hover::after {
+    content: "O";
+    opacity: 0.4;
+}
+
+.strike {
+    position: absolute;
+    background-color: #4b749a;
+}
+
+.strike-row-1 {
+    width: 100%;
+    height: 4px;
+    top: 15%;
+}
+
+.strike-row-2 {
+    width: 100%;
+    height: 4px;
+    top: 48%;
+}
+
+.strike-row-3 {
+    width: 100%;
+    height: 4px;
+    top: 83%;
+}
+
+.strike-column-1 {
+    height: 100%;
+    width: 4px;
+    left: 15%;
+}
+
+.strike-column-2 {
+    height: 100%;
+    width: 4px;
+    left: 48%;
+}
+
+.strike-column-3 {
+    height: 100%;
+    width: 4px;
+    left: 83%;
+}
+
+.strike-diagonal-1 {
+    width: 90%;
+    height: 4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(45deg);
+}
+
+.strike-diagonal-2 {
+    width: 90%;
+    height: 4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(-45deg);
+}
+
+.game-over {
+    color: #c2baba;
+    text-align: center;
+    border: #4b749a 6px;
+    border-style: solid;
+    padding: 10px;
+    margin-top: 335px;
+    font-size: 1.5em;
+}
+
+.reset-button {
+    margin-top: 20px;
+    padding: 18px;
+    background-color: #4b749a;
+    color: #c2baba;
+    width: 100%;
+    font-size: 1.5em;
+}

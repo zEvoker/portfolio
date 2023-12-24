@@ -22,7 +22,7 @@
             color: #4b749a;
             font-size: 18px;
             position: absolute;
-            margin-top: -20px;
+            top: -20px;
             left: 10px;
             opacity: 0.6;
         }
@@ -33,8 +33,8 @@
             color: #4b749a;
             font-size: 18px;
             position: absolute;
-            margin-top: 32px;
-            margin-left: 20px;
+            top: 32px;
+            left: 225px;
             animation: fadeIn 1s 1.7s backwards;
             opacity: 0.6;
         }
@@ -114,7 +114,7 @@
         white-space: nowrap;
 
         &:hover {
-            background: #4b749a;
+            background: #b7b6b6;
             color: #333;
         }
     }

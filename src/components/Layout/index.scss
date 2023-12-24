@@ -87,7 +87,8 @@
     }
 }
 
-.about-page {
+.about-page,
+.contact-page {
     .text-zone {
         position: absolute;
         left: 10%;
@@ -137,7 +138,7 @@
 
     p {
         font-size: 14px;
-        color: #fff;
+        color: #b1b1fd;
         font-family: sans-serif;
         font-weight: 300;
         min-width: fit-content;

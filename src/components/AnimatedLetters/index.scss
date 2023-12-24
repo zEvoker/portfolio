@@ -17,6 +17,35 @@
     }
 }
 
+.blinker {
+    animation: blink-animation 0.8s infinite;
+    min-width: 10px;
+    display: inline-block;
+    animation-fill-mode: both;
+    opacity: 0;
+
+    @keyframes blink-animation {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    &:hover {
+        animation: rubberBand 1s;
+        color: #4b749a;
+    }
+
+    animation-delay: 7.2s;
+}
+
 @for $i from 1 through 55 {
     .text-animate._#{$i} {
         animation-delay: #{$i/10}s;

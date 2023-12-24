@@ -2,9 +2,8 @@ import './index.scss'
 import AnimatedLetters from '../AnimatedLetters';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCss3, faGithub, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
+import { faAngular, faCss3, faGithub, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
 import Loader from 'react-loaders';
-import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -22,22 +21,22 @@ const About = () => {
                         <AnimatedLetters letterClass={letterClass} strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']} idx={15} />
                     </h1>
                     <p>
-                        I am Johann B Simon, an aspiring Software Engineer studying Computer Science and Engineering at National Institute of Technology, Calicut.
+                        I am Johann B Simon, an aspiring Software Engineer pursuing my B.Tech in Computer Science and Engineering at National Institute of Technology, Calicut.
                     </p>
                     <p>
-                        My tech stack includes HTML, CSS, React, NodeJS, Git and more.
+                        My tech stack includes HTML, CSS, React, NodeJS, Git and more. I am also interested in competitive programming and have included the link to my LeetCode account in the sidebar.
                     </p>
                     <p>
-                        I am also interested in competitive programming and have included the link to my LeetCode account in the sidebar.
+                        I thoroughly enjoy problem solving and system design and also working with others to come up with efficient solutions to common problems.
                     </p>
                 </div>
                 <div className='stage-cube-cont'>
                     <div className='cubespinner'>
                         <div className='face1'>
-                            <FontAwesomeIcon icon={faCode} color="#DD0031" />
+                            <FontAwesomeIcon icon={faAngular} color="#DD0031" />
                         </div>
                         <div className='face2'>
-                            <FontAwesomeIcon icon={faHtml5} color="#F06529" />
+                            <FontAwesomeIcon icon={faHtml5} color="#F06529" rotation={270} />
                         </div>
                         <div className='face3'>
                             <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
@@ -49,7 +48,7 @@ const About = () => {
                             <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
                         </div>
                         <div className='face6'>
-                            <FontAwesomeIcon icon={faGithub} color="#EC4E28" />
+                            <FontAwesomeIcon icon={faGithub} color="#282322" />
                         </div>
                     </div>
                 </div>
