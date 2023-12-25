@@ -3,6 +3,7 @@ import Game from "../Game";
 import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
 import { useEffect, useState } from "react";
+import { MapContainer, Marker, TileLayer, Popup } from "react-leaflet";
 
 const Contact = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -47,7 +48,22 @@ const Contact = () => {
                     </div>
                 </div>
                 <Game />
+                <div className="info-map">
+                    Johann B Simon
+                    <br />
+                    NIT Calicut, Kerala
+                    <br />
+                    <span>jbsimon03@gmail.com</span>
 
+                </div>
+                <div className="map-wrap">
+                    <MapContainer center={[11.31735, 75.93801]} zoom={13}>
+                        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                        <Marker position={[11.31735, 75.93801]}>
+                            <Popup>NITC</Popup>
+                        </Marker>
+                    </MapContainer>
+                </div>
             </div>
             <Loader type="pacman" />
         </>

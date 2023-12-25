@@ -5,7 +5,7 @@
     padding-top: 18%;
     margin-left: 0;
     position: absolute;
-    right: 0;
+    right: 50px;
     overflow: hidden;
 }
 
@@ -88,5 +88,39 @@
 
     83% {
         transform: rotateX(90deg);
+    }
+}
+
+.bubbles {
+    position: absolute;
+    display: flex;
+    right: 100px;
+    top: 0;
+
+    span {
+        position: relative;
+        width: 10px;
+        height: 10px;
+        background: #4fc3dc;
+        margin: 0 5px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 5px #4fc3dc44, 0 0 25px #4fc3dc, 0 0 50px #4fc3dc;
+        animation: bubbling 15s linear infinite;
+        animation-duration: calc(240s/var(--i));
+    }
+}
+
+.bubbles span:nth-child(even) {
+    box-shadow: 0 0 0 5px #64585d44, 0 0 25px #ff2d75, 0 0 50px #ff2d75;
+    background: #c3bdbf;
+}
+
+@keyframes bubbling {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1);
     }
 }
