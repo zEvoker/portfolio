@@ -71,24 +71,25 @@
 
 .info-map {
     position: absolute;
-    background-color: #000;
-    top: 520px;
-    right: 5px;
+    background-color: #124f6d;
+    top: 0;
+    right: 1%;
     z-index: 99;
-    width: 267px;
-    padding: 20px;
+    width: 150px;
+    padding: 15px;
     color: #fff;
     font-family: 'Helvetica';
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 300;
     opacity: 0;
     animation: fadeIn 1s 1.5s;
     animation-fill-mode: forwards;
+    text-align: center;
 
     span {
-        font-size: 16px;
+        font-size: 14px;
         display: block;
-        padding-top: 20px;
+        padding-top: 10px;
         color: #ffd700;
     }
 }
@@ -96,8 +97,9 @@
 .map-wrap {
     background: rgba(8, 253, 216, 0.1);
     float: right;
-    width: 53%;
+    width: 51%;
     height: 100%;
+    margin-right: 1%;
 }
 
 .leaflet-container {
@@ -107,4 +109,11 @@
     opacity: 0;
     animation: backInRight 1s 1.2s;
     animation-fill-mode: forwards;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: all 0s ease-in-out 5000s;
 }

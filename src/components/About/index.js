@@ -2,8 +2,9 @@ import './index.scss'
 import AnimatedLetters from '../AnimatedLetters';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngular, faCss3, faGithub, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
+import { faCss3, faGithub, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
 import Loader from 'react-loaders';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -31,15 +32,15 @@ const About = () => {
                     </p>
                 </div>
                 <div className="bubbles">
-                    <span style={{ '--i': 11 }}></span>
+                    <span style={{ '--i': 20 }}></span>
                     <span style={{ '--i': 12 }}></span>
-                    <span style={{ '--i': 24 }}></span>
+                    <span style={{ '--i': 16 }}></span>
                     <span style={{ '--i': 10 }}></span>
                     <span style={{ '--i': 14 }}></span>
                     <span style={{ '--i': 23 }}></span>
                     <span style={{ '--i': 18 }}></span>
                     <span style={{ '--i': 16 }}></span>
-                    <span style={{ '--i': 19 }}></span>
+                    <span style={{ '--i': 8 }}></span>
                     <span style={{ '--i': 20 }}></span>
                     <span style={{ '--i': 22 }}></span>
                     <span style={{ '--i': 25 }}></span>
@@ -47,12 +48,12 @@ const About = () => {
                     <span style={{ '--i': 21 }}></span>
                     <span style={{ '--i': 15 }}></span>
                     <span style={{ '--i': 13 }}></span>
-                    <span style={{ '--i': 26 }}></span>
+                    <span style={{ '--i': 19 }}></span>
                     <span style={{ '--i': 17 }}></span>
                     <span style={{ '--i': 13 }}></span>
-                    <span style={{ '--i': 28 }}></span>
+                    <span style={{ '--i': 10 }}></span>
                     <span style={{ '--i': 11 }}></span>
-                    <span style={{ '--i': 12 }}></span>
+                    <span style={{ '--i': 15 }}></span>
                     <span style={{ '--i': 24 }}></span>
                     <span style={{ '--i': 10 }}></span>
                     <span style={{ '--i': 14 }}></span>
@@ -66,7 +67,7 @@ const About = () => {
                 <div className='stage-cube-cont'>
                     <div className='cubespinner'>
                         <div className='face1'>
-                            <FontAwesomeIcon icon={faAngular} color="#DD0031" />
+                            <FontAwesomeIcon icon={faCode} color="#DD0031" />
                         </div>
                         <div className='face2'>
                             <FontAwesomeIcon icon={faHtml5} color="#F06529" rotation={270} />

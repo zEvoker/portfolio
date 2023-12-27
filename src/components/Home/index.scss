@@ -119,3 +119,16 @@
         }
     }
 }
+
+.contain-clock {
+    position: absolute;
+    width: 358px;
+    height: 358px;
+    top: calc(50% - 180px);
+    right: 220px;
+    opacity: 0;
+    animation: backInRight;
+    animation-duration: 3s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}

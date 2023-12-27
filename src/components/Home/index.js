@@ -3,14 +3,13 @@ import './index.scss'
 import AnimatedLetters from '../AnimatedLetters';
 import React, { useEffect, useState } from "react";
 import Loader from 'react-loaders';
-import Game from '../Game';
+import Clock from '../Clock';
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
-    const [blinkClass, setBlinkClass] = useState('text-animate')
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState([]);
-    const [delta, setDelta] = useState(200);
+    const [delta, setDelta] = useState(857);
 
     const nameArray = ['I', '', 'a', 'm', ' ', 'J', 'o', 'h', 'a', 'n', 'n', ' ', 'B', ' ', 'S', 'i', 'm', 'o', 'n']
     const jobStr = "Aspiring Software Engineer"
@@ -20,7 +19,6 @@ const Home = () => {
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             setLetterClass('text-animate-hover');
-            setBlinkClass('blinker');
         }, 6000);
         return () => clearTimeout(timeoutId);
     }, []);
@@ -36,10 +34,10 @@ const Home = () => {
         setText(curText);
         if (!isDeleting && curText.length === welcome.length) {
             setIsDeleting(true);
-            setDelta(400);
+            setDelta(1000 / 7);
         } else if (isDeleting && curText.length === 0) {
             setIsDeleting(false);
-            setDelta(800);
+            setDelta(1000);
         }
     }
 
@@ -49,7 +47,7 @@ const Home = () => {
                 <div className="text-zone">
                     <h1>
                         <AnimatedLetters letterClass={letterClass} strArray={text} idx={10} />
-                        <AnimatedLetters letterClass={blinkClass} strArray={['!']} idx={54} />
+                        <AnimatedLetters letterClass={'blinker'} strArray={['!']} idx={54} />
                     </h1>
                     <h2>
                         <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15} />
@@ -59,8 +57,10 @@ const Home = () => {
                     <h3>Student at NIT Calicut</h3>
                     <Link to="/contact" className='flat-button'>CONTACT ME</Link>
                 </div>
+                <div className="contain-clock">
+                    <Clock />
+                </div>
             </div>
-            <Game />
             <Loader type="pacman" />
         </>
     )

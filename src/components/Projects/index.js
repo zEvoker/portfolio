@@ -8,7 +8,8 @@ import Nav from 'react-bootstrap/Nav';
 import bat from '../assets/images/batjpg.jpg';
 import mb from '../assets/images/mb.jpeg';
 import tdl from '../assets/images/tdl.png';
-import darj from '../assets/images/darj.png'
+import darj from '../assets/images/darj.png';
+import mb2 from '../assets/images/mb2.png'
 
 const Projects = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -29,38 +30,38 @@ const Projects = () => {
         {
             title: "MovieBase",
             desc: "Get latest movie details",
+            imgUrl: mb2,
+            lnk: "https://moviebase-70706.web.app/",
+        },
+        {
+            title: "MovieBase",
+            desc: "Get latest movie details",
             imgUrl: mb,
-            lnk: "https://zevoker.github.io/portfolio/",
+            lnk: "https://moviebase-70706.web.app/",
         },
         {
             title: "TITLE",
             desc: "Desgin & Development",
             imgUrl: bat,
-            lnk: "https://zevoker.github.io/to-do-list/",
+            lnk: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         },
         {
             title: "TITLE",
             desc: "Desgin & Development",
             imgUrl: bat,
-            lnk: "https://zevoker.github.io/to-do-list/",
+            lnk: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         },
         {
             title: "TITLE",
             desc: "Desgin & Development",
             imgUrl: bat,
-            lnk: "https://zevoker.github.io/to-do-list/",
+            lnk: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         },
         {
             title: "TITLE",
             desc: "Desgin & Development",
             imgUrl: bat,
-            lnk: "https://zevoker.github.io/to-do-list/",
-        },
-        {
-            title: "TITLE",
-            desc: "Desgin & Development",
-            imgUrl: bat,
-            lnk: "https://zevoker.github.io/to-do-list/",
+            lnk: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         }
     ];
     const projects2 = [
@@ -80,25 +81,25 @@ const Projects = () => {
             title: "TITLE",
             desc: "Desgin & Development",
             imgUrl: bat,
-            lnk: "https://zevoker.github.io/to-do-list/",
+            lnk: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         },
         {
             title: "TITLE",
             desc: "Desgin & Development",
             imgUrl: bat,
-            lnk: "https://zevoker.github.io/to-do-list/",
+            lnk: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         },
         {
             title: "TITLE",
             desc: "Desgin & Development",
             imgUrl: bat,
-            lnk: "https://zevoker.github.io/to-do-list/",
+            lnk: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         },
         {
             title: "TITLE",
             desc: "Desgin & Development",
             imgUrl: bat,
-            lnk: "https://zevoker.github.io/to-do-list/",
+            lnk: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         }
     ];
 

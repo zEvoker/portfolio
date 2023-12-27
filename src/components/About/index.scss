@@ -94,7 +94,7 @@
 .bubbles {
     position: absolute;
     display: flex;
-    right: 100px;
+    right: 130px;
     top: 0;
 
     span {
@@ -112,7 +112,7 @@
 
 .bubbles span:nth-child(even) {
     box-shadow: 0 0 0 5px #64585d44, 0 0 25px #ff2d75, 0 0 50px #ff2d75;
-    background: #c3bdbf;
+    background: #a49ea0;
 }
 
 @keyframes bubbling {
