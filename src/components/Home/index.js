@@ -10,11 +10,12 @@ const Home = () => {
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState([]);
     const [delta, setDelta] = useState(857);
+    const [idx, setIdx] = useState(0);
 
     const nameArray = ['I', '', 'a', 'm', ' ', 'J', 'o', 'h', 'a', 'n', 'n', ' ', 'B', ' ', 'S', 'i', 'm', 'o', 'n']
     const jobStr = "Aspiring Software Engineer"
     const jobArray = [...jobStr];
-    const welcome = ['W', 'e', 'l', 'c', 'o', 'm', 'e']
+    const welcome = [['W', 'e', 'l', 'c', 'o', 'm', 'e'], ['H', 'e', 'l', 'l', 'o']]
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
@@ -30,13 +31,14 @@ const Home = () => {
     }, [text])
 
     const tick = () => {
-        let curText = isDeleting ? welcome.slice(0, text.length - 1) : welcome.slice(0, text.length + 1);
+        let curText = isDeleting ? welcome[idx].slice(0, text.length - 1) : welcome[idx].slice(0, text.length + 1);
         setText(curText);
-        if (!isDeleting && curText.length === welcome.length) {
+        if (!isDeleting && curText.length === welcome[idx].length) {
             setIsDeleting(true);
-            setDelta(1000 / 7);
+            setDelta(1000 / welcome[idx].length);
         } else if (isDeleting && curText.length === 0) {
             setIsDeleting(false);
+            setIdx(1 - idx);
             setDelta(1000);
         }
     }

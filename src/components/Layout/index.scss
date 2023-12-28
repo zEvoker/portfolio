@@ -137,8 +137,8 @@
     }
 
     p {
-        font-size: 14px;
-        color: #c2c2ff;
+        font-size: 15px;
+        color: #c5dcf0;
         font-family: sans-serif;
         font-weight: 300;
         min-width: fit-content;
@@ -154,6 +154,17 @@
 
         &:nth-of-type(3) {
             animation-delay: 1.3s;
+        }
+
+        h5 {
+            display: inline-block;
+            font-size: 15px;
+            color: #4bd8f1;
+            font-family: sans-serif;
+            font-weight: 300;
+            min-width: fit-content;
+            animation: pulse 1s;
+            margin: 0px;
         }
     }
 }
