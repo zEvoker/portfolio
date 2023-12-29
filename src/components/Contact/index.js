@@ -47,7 +47,6 @@ const Contact = () => {
                         </form>
                     </div>
                 </div>
-                <Game />
                 <div className="info-map">
                     Johann B Simon
                     <br />
@@ -57,6 +56,7 @@ const Contact = () => {
 
                 </div>
                 <div className="map-wrap">
+                    <Game />
                     <MapContainer center={[11.31735, 75.93801]} zoom={13}>
                         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                         <Marker position={[11.31735, 75.93801]}>

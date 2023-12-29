@@ -125,10 +125,41 @@
     width: 358px;
     height: 358px;
     top: calc(50% - 180px);
-    right: 220px;
+    right: 12%;
     opacity: 0;
     animation: backInRight;
     animation-duration: 3s;
     animation-delay: 5s;
     animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 900px) {
+
+    .tags,
+    .home-page h1:before,
+    .home-page h1:after,
+    .home-page h2:before,
+    .home-page h2:after {
+        display: none;
+    }
+
+    .home-page .text-zone {
+        position: initial;
+        margin-top: 20%;
+        width: 100%;
+        transform: none;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .home-page .flat-button {
+        display: block;
+        margin: 20px auto 0 auto;
+        width: 124px;
+    }
+
+    .contain-clock {
+        top: 290px;
+        right: calc(50% - 178px);
+    }
 }

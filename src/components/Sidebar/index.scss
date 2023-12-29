@@ -69,6 +69,7 @@
                 width: 100%;
                 text-align: center;
                 opacity: 0;
+                -webkit-transition: all 0.3s ease-out;
                 transition: all 0.3s ease-out;
             }
 
@@ -120,11 +121,86 @@
                 display: block;
                 font-size: 15px;
                 line-height: 16px;
+                color: #4d4d4e;
 
                 &:hover svg {
                     color: #124f6d;
                 }
             }
+
+            &:hover {
+                .anchor-icon {
+                    color: #124f6d;
+                }
+            }
+        }
+    }
+}
+
+.hamburger-icon,
+.close-icon {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .nav-bar {
+        position: fixed;
+        height: 50px;
+        width: 100%;
+        min-height: auto;
+
+        .logo img {
+            height: 100%;
+        }
+
+        ul,
+        nav {
+            display: none;
+        }
+
+        nav {
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: #0e0d0d;
+            height: 100%;
+            margin: 0;
+            z-index: 2;
+            position: fixed;
+            padding-top: 50px;
+
+            &.mobile-show {
+                display: block;
+            }
+
+            a {
+                display: flex;
+                margin-left: 73%;
+                align-items: center;
+            }
+
+            a:after {
+                opacity: 1;
+                position: initial;
+                width: auto;
+                margin-left: 10PX;
+            }
+
+            a svg {
+                opacity: 1 !important;
+            }
+        }
+
+        .hamburger-icon,
+        .close-icon {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            display: block;
+        }
+
+        .close-icon {
+            right: 21%;
         }
     }
 }

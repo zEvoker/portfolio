@@ -174,3 +174,55 @@
         color: #fff;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .page {
+        position: initial;
+    }
+
+    .contain {
+        position: initial;
+        height: auto;
+        min-height: auto;
+
+        &.contact-page,
+        &.about-page,
+        &.projects-page {
+            .text-zone {
+                position: initial;
+                transform: none;
+                width: 100%;
+                display: block;
+                padding: 15px;
+                margin-top: 35px;
+                box-sizing: border-box;
+
+                h1 {
+                    margin-bottom: 0px;
+                    left: 0;
+                }
+
+                h1:before,
+                h1:after {
+                    display: none;
+                }
+            }
+        }
+
+        &.projects-page {
+            .text-zone {
+                h1 {
+                    left: calc(50% - 108px);
+                    width: fit-content;
+                }
+            }
+        }
+    }
+
+    .stage-cube-cont {
+        position: initial;
+        width: 100%;
+        height: 0%;
+        overflow: visible;
+    }
+}

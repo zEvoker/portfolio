@@ -125,3 +125,10 @@
     width: 100%;
     font-size: 1.5em;
 }
+
+@media screen and (max-width: 1200px) {
+    .container-game {
+        top: 500px;
+        right: 50px;
+    }
+}

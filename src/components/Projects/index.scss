@@ -74,3 +74,19 @@
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 0px 55px 55px 0px;
 }
+
+@media screen and (max-width: 900px) {
+    .project {
+        width: 100%;
+        right: 0;
+        padding: 20px 0;
+    }
+
+    .project .nav.nav-pills .nav-link {
+        font-size: 15px;
+    }
+
+    .project .nav.nav-pills .nav-link.active {
+        font-size: 16px;
+    }
+}

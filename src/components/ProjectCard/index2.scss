@@ -58,3 +58,9 @@
     font-size: 15px;
     letter-spacing: 0.8px;
 }
+
+@media screen and (max-width: 1200px) {
+    .proj-txt h4 {
+        font-size: 20px;
+    }
+}
