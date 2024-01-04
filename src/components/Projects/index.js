@@ -2,7 +2,7 @@ import Loader from 'react-loaders';
 import React, { useEffect, useState } from "react";
 import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
-import { ProjectCard } from '../ProjectCard';
+import { Card } from '../Card';
 import { Col, Tab, Row } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import bat from '../assets/images/batjpg.jpg';
@@ -132,14 +132,14 @@ const Projects = () => {
                                     <Tab.Pane eventKey="first">
                                         {activeTab === "first" && (
                                             projects1.map((project, index) => (
-                                                <ProjectCard key={index} {...project} />
+                                                <Card key={index} {...project} />
                                             ))
                                         )}
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="second">
                                         {activeTab === "second" && (
                                             projects2.map((project, index) => (
-                                                <ProjectCard key={index} {...project} />
+                                                <Card key={index} {...project} />
                                             ))
                                         )}
                                     </Tab.Pane>

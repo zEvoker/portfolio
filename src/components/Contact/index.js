@@ -4,9 +4,14 @@ import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
 import { useEffect, useState } from "react";
 import { MapContainer, Marker, TileLayer, Popup } from "react-leaflet";
+import { app, database } from "../firebaseConfig";
+import { collection, addDoc } from "firebase/firestore"
 
 const Contact = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
+    const [data, setData] = useState({ name: '', email: '', subject: '', message: '' })
+
+    const dbInst = collection(database, 'messages');
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
@@ -14,6 +19,21 @@ const Contact = () => {
         }, 3000);
         return () => clearTimeout(timeoutId);
     }, []);
+
+    const handleInputs = (event) => {
+        let inputs = { [event.target.name]: event.target.value };
+        setData({ ...data, ...inputs });
+    }
+
+    const handleSubmit = () => {
+        addDoc(dbInst, data)
+            .then(() => {
+                alert('message sent')
+            })
+            .catch((err) => {
+                alert(err.message)
+            })
+    }
 
     return (
         <>
@@ -29,19 +49,19 @@ const Contact = () => {
                         <form>
                             <ul>
                                 <li className="half">
-                                    <input type="text" name="name" placeholder="Name" required />
+                                    <input type="text" name="name" placeholder="Name" onChange={event => handleInputs(event)} required />
                                 </li>
                                 <li className="half">
-                                    <input type="email" name="email" placeholder="Email" required />
+                                    <input type="email" name="email" placeholder="Email" onChange={event => handleInputs(event)} required />
                                 </li>
                                 <li>
-                                    <input type="text" name="subject" placeholder="Subject" required />
+                                    <input type="text" name="subject" placeholder="Subject" onChange={event => handleInputs(event)} required />
                                 </li>
                                 <li>
-                                    <textarea placeholder="Message" name="message" required></textarea>
+                                    <textarea placeholder="Message" name="message" onChange={event => handleInputs(event)} required></textarea>
                                 </li>
                                 <li>
-                                    <input type="submit" className="flat-button" value="SEND" />
+                                    <button className="flat-button" onClick={handleSubmit}>SEND</button>
                                 </li>
                             </ul>
                         </form>

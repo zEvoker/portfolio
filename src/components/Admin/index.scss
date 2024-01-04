@@ -1,0 +1,140 @@
+.admin-page {
+    .text-zone {
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 35%;
+        vertical-align: middle;
+        display: table-cell;
+        max-height: 90%;
+    }
+
+    h1 {
+        font-size: 53px;
+        font-family: 'Coolvetica';
+        color: #4bd8f1;
+        font-weight: 400;
+        margin-top: 0;
+        position: relative;
+        margin-bottom: 40px;
+        left: 10px;
+
+        &::before {
+            content: '<h1>';
+            font-family: 'La Belle Aurore';
+            font-size: 18px;
+            color: #4b749a;
+            position: absolute;
+            margin-top: -10px;
+            left: -10px;
+            opacity: 0.6;
+            line-height: 18px;
+        }
+
+        &::after {
+            content: '<h1/>';
+            font-family: 'La Belle Aurore';
+            font-size: 18px;
+            color: #4b749a;
+            position: absolute;
+            margin-left: 20px;
+            left: -30px;
+            bottom: -20px;
+            opacity: 0.6;
+            line-height: 18px;
+        }
+    }
+
+    .contain-msgs {
+        position: absolute;
+        width: 500px;
+        height: 400px;
+        top: 17%;
+        right: 12%;
+        opacity: 0;
+        animation: backInRight;
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+
+        .contact-form {
+            width: 100%;
+            margin-top: 20px;
+
+            ul {
+                padding: 0;
+                margin: 0;
+
+                li {
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    margin-bottom: 10px;
+                    overflow: hidden;
+                    display: block;
+                    position: relative;
+                    opacity: 0;
+                    animation: fadeInUp 2s 2s;
+                    animation-fill-mode: forwards;
+                    clear: both;
+                    min-height: 50px;
+
+                    span {
+                        display: block;
+                        width: 100%;
+                        border: 0;
+                        background: #115173;
+                        height: 50px;
+                        font-size: 16px;
+                        color: #fff;
+                        padding: 10px 20px;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+
+            .textarea {
+                width: 100%;
+                border: 0;
+                background: #115173;
+                height: 50px;
+                font-size: 16px;
+                color: #fff;
+                padding: 20px;
+                min-height: 150px;
+                box-sizing: border-box;
+                overflow: visible;
+            }
+
+            .flat-button,
+            .del-button {
+                display: inline-block;
+                margin-top: 5px;
+            }
+
+            .flat-button {
+                color: aqua;
+                background: 0 0;
+                font-size: 11px;
+                letter-spacing: 3px;
+                text-decoration: none;
+                padding: 8px 10px;
+                border: 1px solid #ffd700;
+                border-radius: 4px;
+                margin-left: 20px;
+            }
+
+            .del-button {
+                color: aqua;
+                background: 0 0;
+                font-size: 12px;
+                letter-spacing: 3px;
+                text-decoration: none;
+                padding: 8px 10px;
+                border: 1px solid #ffd700;
+                border-radius: 4px;
+            }
+        }
+    }
+}
