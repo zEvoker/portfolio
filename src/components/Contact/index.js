@@ -28,7 +28,7 @@ const Contact = () => {
     const handleSubmit = () => {
         addDoc(dbInst, data)
             .then(() => {
-                alert('message sent')
+                window.location.reload();
             })
             .catch((err) => {
                 alert(err.message)
@@ -46,25 +46,23 @@ const Contact = () => {
                         You can use the below form to contact me regarding available projects or opportunities to collaborate...
                     </p>
                     <div className="contact-form">
-                        <form>
-                            <ul>
-                                <li className="half">
-                                    <input type="text" name="name" placeholder="Name" onChange={event => handleInputs(event)} required />
-                                </li>
-                                <li className="half">
-                                    <input type="email" name="email" placeholder="Email" onChange={event => handleInputs(event)} required />
-                                </li>
-                                <li>
-                                    <input type="text" name="subject" placeholder="Subject" onChange={event => handleInputs(event)} required />
-                                </li>
-                                <li>
-                                    <textarea placeholder="Message" name="message" onChange={event => handleInputs(event)} required></textarea>
-                                </li>
-                                <li>
-                                    <button className="flat-button" onClick={handleSubmit}>SEND</button>
-                                </li>
-                            </ul>
-                        </form>
+                        <ul>
+                            <li className="half">
+                                <input type="text" name="name" placeholder="Name" onChange={event => handleInputs(event)} required />
+                            </li>
+                            <li className="half">
+                                <input type="email" name="email" placeholder="Email" onChange={event => handleInputs(event)} required />
+                            </li>
+                            <li>
+                                <input type="text" name="subject" placeholder="Subject" onChange={event => handleInputs(event)} required />
+                            </li>
+                            <li>
+                                <textarea placeholder="Message" name="message" onChange={event => handleInputs(event)} required></textarea>
+                            </li>
+                            <li>
+                                <button className="flat-button" onClick={handleSubmit}>SEND</button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div className="info-map">

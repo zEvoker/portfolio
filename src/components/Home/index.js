@@ -9,13 +9,17 @@ const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState([]);
-    const [delta, setDelta] = useState(857);
+    const [delta, setDelta] = useState(50);
     const [idx, setIdx] = useState(0);
 
     const nameArray = ['I', '', 'a', 'm', ' ', 'J', 'o', 'h', 'a', 'n', 'n', ' ', 'B', ' ', 'S', 'i', 'm', 'o', 'n']
-    const jobStr = "Aspiring Software Engineer"
+    const jobStr = "This is my portfolio website"
     const jobArray = [...jobStr];
-    const welcome = [['W', 'e', 'l', 'c', 'o', 'm', 'e'], ['H', 'e', 'l', 'l', 'o']]
+    const welcome = ['W', 'e', 'l', 'c', 'o', 'm', 'e']
+    const txt1 = "Student at NIT Calicut"
+    const txt2 = "Aspiring Software Engineer"
+    const txt3 = "Competitive Programmer"
+    const txt = [[...txt1], [...txt2], [...txt3]]
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
@@ -31,15 +35,15 @@ const Home = () => {
     }, [text])
 
     const tick = () => {
-        let curText = isDeleting ? welcome[idx].slice(0, text.length - 1) : welcome[idx].slice(0, text.length + 1);
+        let curText = isDeleting ? txt[idx].slice(0, text.length - 1) : txt[idx].slice(0, text.length + 1);
         setText(curText);
-        if (!isDeleting && curText.length === welcome[idx].length) {
+        if (!isDeleting && curText.length === txt[idx].length) {
             setIsDeleting(true);
-            setDelta(1000 / welcome[idx].length);
+            setDelta(50);
         } else if (isDeleting && curText.length === 0) {
             setIsDeleting(false);
-            setIdx(1 - idx);
-            setDelta(1000);
+            setIdx((1 + idx) % 3);
+            setDelta(200);
         }
     }
 
@@ -48,7 +52,7 @@ const Home = () => {
             <div className="home-page">
                 <div className="text-zone">
                     <h1>
-                        <AnimatedLetters letterClass={letterClass} strArray={text} idx={10} />
+                        <AnimatedLetters letterClass={letterClass} strArray={welcome} idx={10} />
                         <AnimatedLetters letterClass={'blinker'} strArray={['!']} idx={54} />
                     </h1>
                     <h2>
@@ -56,7 +60,7 @@ const Home = () => {
                         <br />
                         <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={30} />
                     </h2>
-                    <h3>Student at NIT Calicut</h3>
+                    <h3>-{text}</h3>
                     <Link to="/contact" className='flat-button'>CONTACT ME</Link>
                 </div>
                 <div className="contain-clock">

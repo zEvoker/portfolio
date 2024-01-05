@@ -7,6 +7,9 @@ import { app, database } from "../firebaseConfig";
 
 const Admin = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
+    const [delClass, setDelClass] = useState("del-button disabled");
+    const [flatClass, setFlatClass] = useState("flat-button");
+    const [fltClass, setFltClass] = useState("flat-button disabled");
     const [idx, setIdx] = useState(0);
     const [mesgs, setMesgs] = useState(['n', 'e', 's', 'm']);
 
@@ -24,11 +27,19 @@ const Admin = () => {
         fetchData();
     }, []);
     const getNext = () => {
+        setDelClass("del-button");
+        setFltClass("flat-button");
+        if (idx === mesgs.length - 2) setFlatClass("flat-button disabled");
         if (idx < (mesgs.length - 1)) {
             setIdx(idx + 1);
         }
     }
     const getPrev = () => {
+        setFlatClass("flat-button");
+        if (idx === 1) {
+            setFltClass("flat-button disabled");
+            setDelClass("del-button disabled");
+        }
         if (idx > 0) {
             setIdx(idx - 1);
         }
@@ -45,6 +56,8 @@ const Admin = () => {
                 const updatedMesgData = updatedMesgSnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
                 setMesgs(updatedMesgData);
                 setIdx(0);
+                setFlatClass("flat-button");
+                setFltClass("flat-button disabled");
             } else {
                 console.error('Invalid index or mesgs array is empty.');
             }
@@ -56,10 +69,10 @@ const Admin = () => {
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             setLetterClass('text-animate-hover');
-        }, 2000);
+        }, 3000);
         return () => clearTimeout(timeoutId);
     }, []);
-    const adm = ['A', 'd', 'm', 'i', 'n'];
+    const adm = ['A', 'd', 'm', 'i', 'n', ' ', 'p', 'a', 'g', 'e'];
     const ttl = ['M', 'e', 's', 's', 'a', 'g', 'e', 's'];
 
     return (
@@ -87,9 +100,9 @@ const Admin = () => {
                                 <span className='textarea'>{mesgs[idx].message}</span>
                             </li>
                             <li>
-                                <button className="del-button" onClick={deleteData}>DEL</button>
-                                <button className="flat-button" onClick={getNext}>NEXT</button>
-                                <button className="flat-button" onClick={getPrev}>PREV</button>
+                                <button className={delClass} onClick={deleteData}>DEL</button>
+                                <button className={flatClass} onClick={getNext}>NEXT</button>
+                                <button className={fltClass} onClick={getPrev}>PREV</button>
                             </li>
                         </ul>
                     </div>

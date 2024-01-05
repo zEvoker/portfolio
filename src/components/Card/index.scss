@@ -1,4 +1,4 @@
-.proj-imgbx {
+.proj-bx {
     display: inline-block;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@
     background: #060c21;
     border-radius: 10px;
 
-    .imgBx {
+    .imgx {
         position: absolute;
         top: 0;
         left: 0;
@@ -29,7 +29,7 @@
         }
     }
 
-    .descs {
+    .dex {
         position: absolute;
         bottom: 0;
         left: 10px;
@@ -39,7 +39,7 @@
         background: rgba(0, 0, 0, 0.4);
         display: flex;
         justify-content: center;
-        opacity: 0;
+        opacity: 1;
         transition: 0.5s;
         text-align: center;
 
@@ -56,18 +56,6 @@
                 font-weight: 200;
                 letter-spacing: 2px;
             }
-        }
-    }
-
-    &:hover {
-        height: 240px;
-
-        .imgBx img {
-            opacity: 1;
-        }
-
-        .descs {
-            opacity: 1;
         }
     }
 
@@ -93,23 +81,49 @@
         background: linear-gradient(235deg, #4520a2, #010615, #00bcd4);
         filter: blur(40px);
     }
+
+    &:hover {
+
+        .imgx img {
+            opacity: 1;
+            height: 100%;
+        }
+
+        .dex {
+            opacity: 0;
+        }
+
+        &:before {
+            animation: slidebgc 4s linear infinite;
+        }
+
+        &:after {
+            animation: slidebgc 4s linear infinite;
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
-    .proj-imgbx {
+    .proj-bx {
         height: 150px;
         width: 43%;
 
-        .imgBx img {
+        .imgx img {
             height: 100%;
         }
 
         &:hover {
             height: 210px;
 
-            .imgBx img {
+            .imgx img {
                 height: 100px;
             }
         }
+    }
+}
+
+@keyframes slidebgc {
+    to {
+        background-position: 20vw;
     }
 }

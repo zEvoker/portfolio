@@ -123,6 +123,16 @@
                 border: 1px solid #ffd700;
                 border-radius: 4px;
                 margin-left: 20px;
+
+                &:hover {
+                    transform: translateY(-1px);
+                    box-shadow: 0 1.5px #ffd700;
+                }
+
+                &:active {
+                    transform: translateY(1px);
+                    box-shadow: 0 0.5px #ffd700;
+                }
             }
 
             .del-button {
@@ -134,7 +144,34 @@
                 padding: 8px 10px;
                 border: 1px solid #ffd700;
                 border-radius: 4px;
+
+                &:hover {
+                    transform: translateY(-1px);
+                    box-shadow: 0 1.5px #ffd700;
+                }
+
+                &:active {
+                    transform: translateY(1px);
+                    box-shadow: 0 0.5px #ffd700;
+                }
             }
+
+            .disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .admin-page {
+        .text-zone {
+            display: none;
+        }
+
+        .contain-msgs {
+            width: 80%;
         }
     }
 }

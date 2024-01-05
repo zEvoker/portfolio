@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
 import { Card } from '../Card';
+import { ProjectCard } from '../ProjectCard';
 import { Col, Tab, Row } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import bat from '../assets/images/batjpg.jpg';
@@ -120,10 +121,10 @@ const Projects = () => {
                                         <Nav.Link eventKey="first">Full Stack</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
-                                        <Nav.Link eventKey="second">Front End</Nav.Link>
+                                        <Nav.Link eventKey="second">Display</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
-                                        <Nav.Link eventKey="third">Other</Nav.Link>
+                                        <Nav.Link eventKey="third">Front End</Nav.Link>
                                     </Nav.Item>
                                 </Nav>
                             </Col>
@@ -138,17 +139,35 @@ const Projects = () => {
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="second">
                                         {activeTab === "second" && (
-                                            projects2.map((project, index) => (
-                                                <Card key={index} {...project} />
-                                            ))
+                                            <div className='cube-cont'>
+                                                <div className='spinner'>
+                                                    <div className='face1'>
+                                                        <ProjectCard {...projects1[0]} />
+                                                    </div>
+                                                    <div className='face2'>
+                                                        <ProjectCard {...projects2[0]} />
+                                                    </div>
+                                                    <div className='face3'>
+                                                        <ProjectCard {...projects2[1]} />
+                                                    </div>
+                                                    <div className='face4'>
+                                                        <ProjectCard {...projects1[1]} />
+                                                    </div>
+                                                    <div className='face5'>
+                                                        <ProjectCard {...projects2[0]} />
+                                                    </div>
+                                                    <div className='face6'>
+                                                        <ProjectCard {...projects2[1]} />
+                                                    </div>
+                                                </div>
+                                            </div>
                                         )}
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="third">
                                         {activeTab === "third" && (
-                                            // projects1.map((project, index) => (
-                                            //     <ProjectCard key={index} {...project} />
-                                            // ))
-                                            <h2>hello</h2>
+                                            projects2.map((project, index) => (
+                                                <Card key={index} {...project} />
+                                            ))
                                         )}
                                     </Tab.Pane>
                                 </Tab.Content>
