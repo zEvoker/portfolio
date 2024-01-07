@@ -20,7 +20,7 @@ const Sidebar = () => {
 
     return (
         <div className='nav-bar'>
-            <Link className="logo" to="/" onClick={() => setShowNav(false)}>
+            <Link className="logo" to="/admin" onClick={() => setShowNav(false)}>
                 <img src={bat} alt="http://www.freepik.com Designed by vectorpocket / Freepik" />
             </Link>
             <nav className={showNav ? 'mobile-show' : ''}>

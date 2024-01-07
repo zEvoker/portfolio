@@ -8,7 +8,7 @@
     margin: 10px;
     margin-top: 30px;
     margin-bottom: 0;
-    transition: 0.5s;
+    transition: 0s;
     background: #060c21;
     border-radius: 10px;
 
@@ -59,6 +59,11 @@
         }
     }
 
+    .descript,
+    .stack {
+        display: none;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -84,21 +89,86 @@
 
     &:hover {
 
-        .imgx img {
-            opacity: 1;
-            height: 100%;
+        width: 95%;
+        height: 440px;
+        display: block;
+        position: absolute;
+        top: 180px;
+        left: 0;
+        z-index: 1000000;
+
+        .imgx {
+            display: block;
+            position: absolute;
+            width: 50.9%;
+            left: 49%;
+
+            img {
+                opacity: 1;
+                width: 100%;
+                height: 50%;
+            }
         }
 
         .dex {
-            opacity: 0;
+            top: 10px;
+            height: 47.7%;
+            width: 49%;
+            left: 10px;
+            background: #060c21;
+            align-items: center;
+        }
+
+        .descript {
+            display: block;
+            position: absolute;
+            bottom: 10px;
+            width: 49%;
+            left: 10px;
+            height: 47.7%;
+            background: #060c21;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            padding: 0 10px;
+
+            span {
+                font-size: 14px;
+                color: #fff;
+                font-weight: 200;
+                letter-spacing: 2px;
+            }
+        }
+
+        .stack {
+            display: block;
+            position: absolute;
+            bottom: 10px;
+            width: 49%;
+            right: 10px;
+            height: 47.7%;
+            background: #060c21;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            padding: 0 10px;
+
+            span {
+                font-size: 14px;
+                color: #fff;
+                font-weight: 200;
+                letter-spacing: 2px;
+            }
         }
 
         &:before {
-            animation: slidebgc 4s linear infinite;
+            animation: slidebgc 10s linear infinite;
         }
 
         &:after {
-            animation: slidebgc 4s linear infinite;
+            animation: slidebgc 10s linear infinite;
         }
     }
 }
@@ -124,6 +194,6 @@
 
 @keyframes slidebgc {
     to {
-        background-position: 20vw;
+        background-position: 31vw;
     }
 }

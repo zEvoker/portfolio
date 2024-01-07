@@ -1,4 +1,7 @@
 .admin-page {
+    opacity: 0;
+    animation: fadeIn 1s 3s forwards;
+
     .text-zone {
         position: absolute;
         left: 10%;
@@ -123,6 +126,7 @@
                 border: 1px solid #ffd700;
                 border-radius: 4px;
                 margin-left: 20px;
+                cursor: pointer;
 
                 &:hover {
                     transform: translateY(-1px);
@@ -144,6 +148,7 @@
                 padding: 8px 10px;
                 border: 1px solid #ffd700;
                 border-radius: 4px;
+                cursor: pointer;
 
                 &:hover {
                     transform: translateY(-1px);
@@ -164,6 +169,184 @@
     }
 }
 
+.loginBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    .borderline {
+        position: absolute;
+        top: 0;
+        inset: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: -50%;
+            left: -50%;
+            background: linear-gradient(0deg, transparent, transparent, #00bcd4, #00bcd4, #00bcd4);
+            z-index: 1;
+            transform-origin: bottom right;
+            animation: anilogin 6s linear infinite;
+            animation-delay: -1.5s;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: -50%;
+            left: -50%;
+            background: linear-gradient(0deg, transparent, transparent, #00bcd4, #00bcd4, #00bcd4);
+            z-index: 1;
+            transform-origin: bottom right;
+            animation: anilogin 6s linear infinite;
+            animation-delay: -4.5s;
+        }
+    }
+
+    .loginBox {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background: #1c1c1c;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 0 50px #060c21;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: -50%;
+            left: -50%;
+            background: linear-gradient(0deg, transparent, transparent, #115173, #115173, #115173);
+            z-index: 1;
+            transform-origin: bottom right;
+            animation: anilogin 6s linear infinite;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: -50%;
+            left: -50%;
+            background: linear-gradient(0deg, transparent, transparent, #115173, #115173, #115173);
+            z-index: 1;
+            transform-origin: bottom right;
+            animation: anilogin 6s linear infinite;
+            animation-delay: -3s;
+        }
+
+        .loginForm {
+            position: absolute;
+            inset: 2px;
+            background: #060c21;
+            padding: 40px 40px;
+            border-radius: 16px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                color: #0ef;
+                font-weight: 500;
+                text-align: center;
+                letter-spacing: 0.1em;
+            }
+
+            input[type="submit"] {
+                border: none;
+                outline: none;
+                padding: 8px;
+                background: #00bcd4;
+                cursor: pointer;
+                font-size: 0.9em;
+                border-radius: 4px;
+                font-weight: 600;
+                width: 60px;
+                margin-top: 17px;
+
+                &:active {
+                    opacity: 0.8;
+                }
+            }
+
+            .uBox {
+                position: relative;
+                width: 200px;
+                margin-top: 15px;
+
+                input {
+                    position: relative;
+                    width: 100%;
+                    padding: 15px 10px 8px;
+                    background: transparent;
+                    outline: none;
+                    border: none;
+                    box-shadow: none;
+                    color: #0ef;
+                    font-size: 1.2em;
+                    letter-spacing: 0.07em;
+                    transition: 0.5s;
+                    z-index: 10;
+
+                    &:valid~span,
+                    &:focus~span {
+                        color: #0ef;
+                        font-size: 0.75em;
+                        transform: translateY(-22px);
+                    }
+
+                    &:valid~i,
+                    &:focus~i {
+                        height: 30px;
+                    }
+                }
+
+                span {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0px;
+                    padding: 20px 0px 10px;
+                    pointer-events: none;
+                    color: #8f8f8f;
+                    font-size: 1em;
+                    letter-spacing: 0.05em;
+                    transition: 0.5s;
+                }
+
+                i {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 216px;
+                    height: 2px;
+                    background: #115173;
+                    border-radius: 4px;
+                    overflow: hidden;
+                    transition: 0.5s;
+                    pointer-events: none;
+                }
+
+                input:-webkit-autofill,
+                input:-webkit-autofill:hover,
+                input:-webkit-autofill:focus,
+                input:-webkit-autofill:active {
+                    transition: all 0s ease-in-out 5000s;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 900px) {
     .admin-page {
         .text-zone {
@@ -173,5 +356,15 @@
         .contain-msgs {
             width: 80%;
         }
+    }
+}
+
+@keyframes anilogin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }

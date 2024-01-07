@@ -33,6 +33,8 @@ const Projects = () => {
             desc: "Get latest movie details",
             imgUrl: mb2,
             lnk: "https://moviebase-70706.web.app/",
+            longDesc: "This project is a prototype for MovieBase, a web application created to enhance the exploration and management of cinematic content, encompassing features such as movie searching, viewing, rating, reviewing and more.",
+            stack: "The tech stacks used include React, NodeJS and GIT",
         },
         {
             title: "MovieBase",
