@@ -26,7 +26,7 @@
             width: 100%;
             opacity: 0.1;
             transition: 0.5s;
-            object-fit: cover;
+            object-fit: fill;
         }
     }
 
@@ -48,7 +48,7 @@
             font-size: 20px;
             color: #fff;
             font-weight: 500;
-            line-height: 20px;
+            line-height: 25px;
             letter-spacing: 1px;
 
             span {

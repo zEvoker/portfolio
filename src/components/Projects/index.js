@@ -8,9 +8,11 @@ import { Col, Tab, Row } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import bat from '../assets/images/batjpg.jpg';
 import mb from '../assets/images/mb.jpeg';
-import tdl from '../assets/images/tdl.png';
+import tdl from '../assets/images/todolist.png';
 import darj from '../assets/images/darj.png';
 import mb2 from '../assets/images/mb2.png'
+import vitalyze from '../assets/images/vitalyze.png'
+import chatapp from '../assets/images/chatapp.png'
 
 const Projects = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -30,27 +32,27 @@ const Projects = () => {
     const projects1 = [
         {
             title: "MovieBase",
-            desc: "Get latest movie details",
+            desc: "React + NodeJS",
             imgUrl: mb2,
             lnk: "https://moviebase-70706.web.app/",
         },
         {
-            title: "MovieBase",
-            desc: "Get latest movie details",
+            title: "NITCONF",
+            desc: "React + Spring boot",
             imgUrl: mb,
             lnk: "https://moviebase-70706.web.app/",
         },
         {
-            title: "TITLE",
-            desc: "Desgin & Development",
-            imgUrl: bat,
+            title: "ChatApp",
+            desc: "React + Firebase",
+            imgUrl: chatapp,
             lnk: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         },
         {
-            title: "TITLE",
-            desc: "Desgin & Development",
-            imgUrl: bat,
-            lnk: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            title: "Vitalyze",
+            desc: "React + Django",
+            imgUrl: vitalyze,
+            lnk: "https://code-init-2024.vercel.app/",
         },
         {
             title: "TITLE",
