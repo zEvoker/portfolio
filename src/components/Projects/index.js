@@ -13,6 +13,7 @@ import darj from '../assets/images/darj.png';
 import mb2 from '../assets/images/mb2.png'
 import vitalyze from '../assets/images/vitalyze.png'
 import chatapp from '../assets/images/chatapp.png'
+import scheduler from '../assets/images/sched.png'
 
 const Projects = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -46,7 +47,7 @@ const Projects = () => {
             title: "ChatApp",
             desc: "React + Firebase",
             imgUrl: chatapp,
-            lnk: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            lnk: "https://zevoker.github.io/chatApp/",
         },
         {
             title: "Vitalyze",
@@ -55,10 +56,10 @@ const Projects = () => {
             lnk: "https://code-init-2024.vercel.app/",
         },
         {
-            title: "TITLE",
-            desc: "Desgin & Development",
-            imgUrl: bat,
-            lnk: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            title: "Scheduler",
+            desc: "React + Firebase",
+            imgUrl: scheduler,
+            lnk: "https://zevoker.github.io/scheduler/",
         },
         {
             title: "TITLE",
