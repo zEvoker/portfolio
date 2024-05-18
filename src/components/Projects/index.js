@@ -14,6 +14,7 @@ import mb2 from '../assets/images/mb2.png'
 import vitalyze from '../assets/images/vitalyze.png'
 import chatapp from '../assets/images/chatapp.png'
 import scheduler from '../assets/images/sched.png'
+import pacnav from '../assets/images/pacnav.png'
 
 const Projects = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -70,6 +71,12 @@ const Projects = () => {
     ];
     const projects2 = [
         {
+            title: "Pacnav",
+            desc: "Pacman themed navigation design",
+            imgUrl: pacnav,
+            lnk: "https://zevoker.github.io/pacnav/",
+        },
+        {
             title: "To-do-list",
             desc: "Keep track of all your tasks",
             imgUrl: tdl,
@@ -80,12 +87,6 @@ const Projects = () => {
             desc: "Travel, Stay and Food App",
             imgUrl: darj,
             lnk: "https://mrchr0matic.github.io/darj/",
-        },
-        {
-            title: "TITLE",
-            desc: "Desgin & Development",
-            imgUrl: bat,
-            lnk: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         },
         {
             title: "TITLE",

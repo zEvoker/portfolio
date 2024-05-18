@@ -60,7 +60,7 @@ const Home = () => {
                         <br />
                         <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={30} />
                     </h2>
-                    <h3>-{text}</h3>
+                    <h3>{text}<span className='blinker'>&#95;</span></h3>
                     <Link to="/contact" className='flat-button'>CONTACT ME</Link>
                 </div>
                 <div className="contain-clock">
