@@ -4,7 +4,7 @@ import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
 import { useEffect, useState } from "react";
 import { MapContainer, Marker, TileLayer, Popup } from "react-leaflet";
-import { app, database } from "../firebaseConfig";
+import { database } from "../firebaseConfig";
 import { collection, addDoc } from "firebase/firestore"
 
 const Contact = () => {

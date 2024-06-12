@@ -3,7 +3,9 @@ import AnimatedLetters from '../AnimatedLetters';
 import Loader from 'react-loaders';
 import React, { useEffect, useState } from "react";
 import { getDocs, collection, doc, deleteDoc } from 'firebase/firestore';
-import { app, database } from "../firebaseConfig";
+import { database } from "../firebaseConfig";
+import { ReactCanvasPatternLock } from 'react-canvas-pattern-lock';
+import { useNavigate } from 'react-router-dom';
 
 const Admin = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -13,7 +15,7 @@ const Admin = () => {
     const [loggedIn, setLoggedIn] = useState(false);
     const [idx, setIdx] = useState(0);
     const [mesgs, setMesgs] = useState(['n', 'e', 's', 'm']);
-    const [data, setData] = useState({ uname: '', pswd: '' });
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -68,17 +70,9 @@ const Admin = () => {
         }
     }
 
-    const handleInputs = (event) => {
-        let inputs = { [event.target.name]: event.target.value };
-        setData({ ...data, ...inputs });
-    }
-    const handleDown = (event) => {
-        if (event.key === 'Enter')
-            handleSubmit();
-    }
-    const handleSubmit = () => {
-        if (data.uname === "Johann" && data.pswd === "evoker") setLoggedIn(true);
-        else window.location.reload();
+    const handleSubmit = (pattern) => {
+        if(pattern.length === 7 && pattern.every((value,index) => value === [4,7,8,5,2,1,3][index])) setLoggedIn(true);
+        else navigate("/")
     }
 
     useEffect(() => {
@@ -132,17 +126,9 @@ const Admin = () => {
                     <span className='borderline'></span>
                     <div className='loginForm'>
                         <h2>Login</h2>
-                        <div className='uBox'>
-                            <input type="text" name="uname" required="required" onChange={event => handleInputs(event)} />
-                            <span>Username</span>
-                            <i></i>
+                        <div className='patternlock'>
+                            <ReactCanvasPatternLock width={200} height={200} onComplete={handleSubmit}/>
                         </div>
-                        <div className='uBox'>
-                            <input type="password" name="pswd" required="required" onChange={event => handleInputs(event)} onKeyDown={handleDown} />
-                            <span>Password</span>
-                            <i></i>
-                        </div>
-                        <input type="submit" value="Login" onClick={handleSubmit} />
                     </div>
                 </div>
             </div>

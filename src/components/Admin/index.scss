@@ -249,100 +249,108 @@
             position: absolute;
             inset: 2px;
             background: #060c21;
-            padding: 40px 40px;
+            padding: 20px 30px;
             border-radius: 16px;
             z-index: 2;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
 
             h2 {
                 color: #0ef;
                 font-weight: 500;
                 text-align: center;
+                font-size: 2em;
+                margin-bottom: 5px;
                 letter-spacing: 0.1em;
             }
 
-            input[type="submit"] {
-                border: none;
-                outline: none;
-                padding: 8px;
-                background: #00bcd4;
+            .patternlock{
                 cursor: pointer;
-                font-size: 0.9em;
-                border-radius: 4px;
-                font-weight: 600;
-                width: 60px;
-                margin-top: 17px;
-
-                &:active {
-                    opacity: 0.8;
-                }
             }
 
-            .uBox {
-                position: relative;
-                width: 200px;
-                margin-top: 15px;
+            // input[type="submit"] {
+            //     border: none;
+            //     outline: none;
+            //     padding: 8px;
+            //     background: #00bcd4;
+            //     cursor: pointer;
+            //     font-size: 0.9em;
+            //     border-radius: 4px;
+            //     font-weight: 600;
+            //     width: 60px;
+            //     margin-top: 17px;
 
-                input {
-                    position: relative;
-                    width: 100%;
-                    padding: 15px 10px 8px;
-                    background: transparent;
-                    outline: none;
-                    border: none;
-                    box-shadow: none;
-                    color: #0ef;
-                    font-size: 1.2em;
-                    letter-spacing: 0.07em;
-                    transition: 0.5s;
-                    z-index: 10;
+            //     &:active {
+            //         opacity: 0.8;
+            //     }
+            // }
 
-                    &:valid~span,
-                    &:focus~span {
-                        color: #0ef;
-                        font-size: 0.75em;
-                        transform: translateY(-22px);
-                    }
+            // .uBox {
+            //     position: relative;
+            //     width: 200px;
+            //     margin-top: 15px;
 
-                    &:valid~i,
-                    &:focus~i {
-                        height: 30px;
-                    }
-                }
+            //     input {
+            //         position: relative;
+            //         width: 100%;
+            //         padding: 15px 10px 8px;
+            //         background: transparent;
+            //         outline: none;
+            //         border: none;
+            //         box-shadow: none;
+            //         color: #0ef;
+            //         font-size: 1.2em;
+            //         letter-spacing: 0.07em;
+            //         transition: 0.5s;
+            //         z-index: 10;
 
-                span {
-                    position: absolute;
-                    left: 0;
-                    bottom: 0px;
-                    padding: 20px 0px 10px;
-                    pointer-events: none;
-                    color: #8f8f8f;
-                    font-size: 1em;
-                    letter-spacing: 0.05em;
-                    transition: 0.5s;
-                }
+            //         &:valid~span,
+            //         &:focus~span {
+            //             color: #0ef;
+            //             font-size: 0.75em;
+            //             transform: translateY(-22px);
+            //         }
 
-                i {
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    width: 216px;
-                    height: 2px;
-                    background: #115173;
-                    border-radius: 4px;
-                    overflow: hidden;
-                    transition: 0.5s;
-                    pointer-events: none;
-                }
+            //         &:valid~i,
+            //         &:focus~i {
+            //             height: 30px;
+            //         }
+            //     }
 
-                input:-webkit-autofill,
-                input:-webkit-autofill:hover,
-                input:-webkit-autofill:focus,
-                input:-webkit-autofill:active {
-                    transition: all 0s ease-in-out 5000s;
-                }
-            }
+            //     span {
+            //         position: absolute;
+            //         left: 0;
+            //         bottom: 0px;
+            //         padding: 20px 0px 10px;
+            //         pointer-events: none;
+            //         color: #8f8f8f;
+            //         font-size: 1em;
+            //         letter-spacing: 0.05em;
+            //         transition: 0.5s;
+            //     }
+
+            //     i {
+            //         position: absolute;
+            //         left: 0;
+            //         bottom: 0;
+            //         width: 216px;
+            //         height: 2px;
+            //         background: #115173;
+            //         border-radius: 4px;
+            //         overflow: hidden;
+            //         transition: 0.5s;
+            //         pointer-events: none;
+            //     }
+
+            //     input:-webkit-autofill,
+            //     input:-webkit-autofill:hover,
+            //     input:-webkit-autofill:focus,
+            //     input:-webkit-autofill:active {
+            //         transition: all 0s ease-in-out 5000s;
+            //     }
+            // }
         }
     }
 }

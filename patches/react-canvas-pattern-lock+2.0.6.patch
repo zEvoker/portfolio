@@ -1,0 +1,103 @@
+diff --git a/node_modules/react-canvas-pattern-lock/dist/esm/index.js b/node_modules/react-canvas-pattern-lock/dist/esm/index.js
+index 4d4b0db..0989c1a 100644
+--- a/node_modules/react-canvas-pattern-lock/dist/esm/index.js
++++ b/node_modules/react-canvas-pattern-lock/dist/esm/index.js
+@@ -119,30 +119,30 @@ var DEFAULT_THEME_STATE = {
+     INITIAL: 'initial',
+ };
+ var dimens = {
+-    nodeRadius: 37.5,
++    nodeRadius: 20,
+     lineWidth: 6,
+-    nodeCore: 12.5,
++    nodeCore: 10,
+ };
+ var baseColors = {
+-    primary: '#c5c5c7',
+-    bg: '#fff',
+-    ringBg: 'rgba(11, 31, 53, 0.05)',
++    primary: '#0ef',
++    bg: '#060c21',
++    ringBg: '#0ef',
+     hover: {
+-        inner: '#a0a1a9',
+-        outer: 'rgba(15, 25, 55, 0.1)',
++        inner: '#0ef',
++        outer: '#0ef',
+     },
+ };
+ var DEFAULT_LIGHT_THEME = (_a = {},
+     _a[DEFAULT_THEME_STATE.INITIAL] = {
+-        colors: __assign(__assign({}, baseColors), { accent: '#000', selectedRingBg: 'rgba(11, 31, 53, 0.1)' }),
++        colors: __assign(__assign({}, baseColors), { accent: '#0ef', selectedRingBg: 'rgba(11, 31, 53, 0.1)' }),
+         dimens: dimens,
+     },
+     _a[DEFAULT_THEME_STATE.SUCCESS] = {
+-        colors: __assign(__assign({}, baseColors), { accent: '#2FC26E', selectedRingBg: '#eaf9f0' }),
++        colors: __assign(__assign({}, baseColors), { accent: '#0ef', selectedRingBg: '#eaf9f0' }),
+         dimens: dimens,
+     },
+     _a[DEFAULT_THEME_STATE.FAILURE] = {
+-        colors: __assign(__assign({}, baseColors), { accent: '#F15045', selectedRingBg: '#feedeb' }),
++        colors: __assign(__assign({}, baseColors), { accent: '#0ef', selectedRingBg: '#feedeb' }),
+         dimens: dimens,
+     },
+     _a);
+diff --git a/node_modules/react-canvas-pattern-lock/dist/index.d.ts b/node_modules/react-canvas-pattern-lock/dist/index.d.ts
+index 584c9f8..0f0e334 100644
+--- a/node_modules/react-canvas-pattern-lock/dist/index.d.ts
++++ b/node_modules/react-canvas-pattern-lock/dist/index.d.ts
+@@ -27,7 +27,7 @@ export type ThemeParams = {
+ 		/**
+ 		 * Цвет канваса.
+ 		 */
+-		bg: string;
++		bg?: string;
+ 		/**
+ 		 * Внешний цвет заливки узла.
+ 		 */
+diff --git a/node_modules/react-canvas-pattern-lock/dist/index.js b/node_modules/react-canvas-pattern-lock/dist/index.js
+index 835a818..aa6aa6c 100644
+--- a/node_modules/react-canvas-pattern-lock/dist/index.js
++++ b/node_modules/react-canvas-pattern-lock/dist/index.js
+@@ -127,30 +127,30 @@ var DEFAULT_THEME_STATE = {
+     INITIAL: 'initial',
+ };
+ var dimens = {
+-    nodeRadius: 37.5,
++    nodeRadius: 20,
+     lineWidth: 6,
+-    nodeCore: 12.5,
++    nodeCore: 10,
+ };
+ var baseColors = {
+-    primary: '#c5c5c7',
+-    bg: '#fff',
+-    ringBg: 'rgba(11, 31, 53, 0.05)',
++    primary: '#0ef',
++    bg: '#060c21',
++    ringBg: '#0ef',
+     hover: {
+-        inner: '#a0a1a9',
+-        outer: 'rgba(15, 25, 55, 0.1)',
++        inner: '#0ef',
++        outer: '#0ef',
+     },
+ };
+ var DEFAULT_LIGHT_THEME = (_a = {},
+     _a[DEFAULT_THEME_STATE.INITIAL] = {
+-        colors: __assign(__assign({}, baseColors), { accent: '#000', selectedRingBg: 'rgba(11, 31, 53, 0.1)' }),
++        colors: __assign(__assign({}, baseColors), { accent: '#0ef', selectedRingBg: 'rgba(11, 31, 53, 0.1)' }),
+         dimens: dimens,
+     },
+     _a[DEFAULT_THEME_STATE.SUCCESS] = {
+-        colors: __assign(__assign({}, baseColors), { accent: '#2FC26E', selectedRingBg: '#eaf9f0' }),
++        colors: __assign(__assign({}, baseColors), { accent: '#0ef', selectedRingBg: '#eaf9f0' }),
+         dimens: dimens,
+     },
+     _a[DEFAULT_THEME_STATE.FAILURE] = {
+-        colors: __assign(__assign({}, baseColors), { accent: '#F15045', selectedRingBg: '#feedeb' }),
++        colors: __assign(__assign({}, baseColors), { accent: '#0ef', selectedRingBg: '#feedeb' }),
+         dimens: dimens,
+     },
+     _a);
