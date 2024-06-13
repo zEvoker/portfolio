@@ -25,7 +25,7 @@ const About = () => {
                         I am Johann B Simon, an aspiring Software Engineer pursuing my B.Tech in Computer Science and Engineering at National Institute of Technology, Calicut.
                     </p>
                     <p>
-                        My tech stack includes <h5>HTML</h5>, <h5>CSS</h5>, <h5>React</h5>, <h5>NodeJS</h5>, <h5>Git</h5> and more. I am also interested in competitive programming and have included the link to my <h5>LeetCode</h5> account in the sidebar.
+                        My tech stack includes <h5>HTML</h5>, <h5>CSS</h5>, <h5>Javascript</h5>, <h5>Git</h5>, <h5>AWS</h5> and more. I am also interested in competitive programming and have included the link to my <h5>LeetCode</h5> account in the sidebar.
                     </p>
                     <p>
                         I thoroughly enjoy problem solving and system design and also working with others to come up with efficient solutions to common problems.

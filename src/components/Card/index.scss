@@ -4,10 +4,9 @@
     align-items: center;
     position: relative;
     width: 30%;
-    height: 200px;
+    height: 220px;
     margin: 10px;
-    margin-top: 30px;
-    margin-bottom: 0;
+    margin-top: 70px;
     transition: 0.5s;
     background: #060c21;
     border-radius: 10px;
@@ -35,7 +34,6 @@
         bottom: 0;
         left: 10px;
         right: 10px;
-        //bottom: 10px;
         height: 90px;
         background: rgba(0, 0, 0, 0.4);
         display: flex;
@@ -48,14 +46,14 @@
             font-size: 20px;
             color: #fff;
             font-weight: 500;
-            line-height: 25px;
+            // line-height: 25px;
             letter-spacing: 1px;
 
             span {
                 font-size: 14px;
                 color: #fff;
                 font-weight: 200;
-                letter-spacing: 2px;
+                letter-spacing: 1.8px;
             }
         }
     }
@@ -103,7 +101,18 @@
         }
     }
 }
-
+@media screen and (max-width: 900px) {
+    .proj-bx{
+        .dex{
+            h2{
+                font-size: 18px;
+                span{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width: 600px) {
     .proj-bx {
         height: 150px;
@@ -111,6 +120,16 @@
 
         .imgx img {
             height: 100%;
+        }
+
+        .dex{
+            h2{
+                font-size: 16px;
+
+                span{
+                    font-size: 10px;
+                }
+            }
         }
 
         &:hover {

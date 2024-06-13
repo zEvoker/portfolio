@@ -3,10 +3,8 @@ import React, { useEffect, useState } from "react";
 import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
 import { Card } from '../Card';
-import { ProjectCard } from '../ProjectCard';
 import { Col, Tab, Row } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
-import bat from '../assets/images/batjpg.jpg';
 import mb from '../assets/images/mb.jpeg';
 import tdl from '../assets/images/todolist.png';
 import darj from '../assets/images/darj.png';
@@ -30,82 +28,69 @@ const Projects = () => {
     const handleTabSelect = (key) => {
         setActiveTab(key);
     };
-
+    //Diary
     const projects1 = [
         {
-            title: "MovieBase",
-            desc: "React + NodeJS",
-            imgUrl: mb2,
-            lnk: "https://moviebase-70706.web.app/",
-        },
-        {
-            title: "NITCONF",
-            desc: "React + Spring boot",
-            imgUrl: mb,
-            lnk: "https://moviebase-70706.web.app/",
-        },
-        {
-            title: "ChatApp",
-            desc: "React + Firebase",
-            imgUrl: chatapp,
-            lnk: "https://zevoker.github.io/chatApp/",
-        },
-        {
-            title: "Vitalyze",
-            desc: "React + Django",
-            imgUrl: vitalyze,
-            lnk: "https://code-init-2024.vercel.app/",
-        },
-        {
             title: "Scheduler",
-            desc: "React + Firebase",
+            desc: "Task manager with notifications",
+            stack: "React + Firebase",
             imgUrl: scheduler,
             lnk: "https://zevoker.github.io/scheduler/",
         },
         {
-            title: "TITLE",
-            desc: "Desgin & Development",
-            imgUrl: bat,
-            lnk: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        }
-    ];
+            title: "ChatApp",
+            desc: "Realtime chat application",
+            stack: "React + Firebase",
+            imgUrl: chatapp,
+            lnk: "https://zevoker.github.io/chatApp/",
+        },
+        {
+            title: "To-do-list",
+            desc: "With canvas and drag and drop",
+            stacl: "ReactJS",
+            imgUrl: tdl,
+            lnk: "https://zevoker.github.io/to-do-list/",
+        },
+    ]
+
     const projects2 = [
         {
             title: "Pacnav",
-            desc: "Pacman themed navigation design",
+            desc: "3rd Place at Wix Design Challenge",
+            stack: "ReactJS",
             imgUrl: pacnav,
             lnk: "https://zevoker.github.io/pacnav/",
         },
         {
-            title: "To-do-list",
-            desc: "Keep track of all your tasks",
-            imgUrl: tdl,
-            lnk: "https://zevoker.github.io/to-do-list/",
+            title: "Vitalyze",
+            desc: "Infuse grayscale image with color",
+            stack: "React + Django",
+            imgUrl: vitalyze,
+            lnk: "https://code-init-2024.vercel.app/",
         },
         {
-            title: "Code.Init()",
+            title: "Code.Init() 2023",
             desc: "Travel, Stay and Food App",
             imgUrl: darj,
             lnk: "https://mrchr0matic.github.io/darj/",
         },
+    ]
+    //Brevidy and nitconf image and overlay
+    const projects3 = [
         {
-            title: "TITLE",
-            desc: "Desgin & Development",
-            imgUrl: bat,
-            lnk: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            title: "NITCONF",
+            desc: "Conference website for SE Lab'24",
+            stack: "React + Spring boot",
+            imgUrl: mb,
+            lnk: "https://nitconf.vercel.app/",
         },
         {
-            title: "TITLE",
-            desc: "Desgin & Development",
-            imgUrl: bat,
-            lnk: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            title: "MovieBase",
+            desc: "Movie database with ratings",
+            stack: "React + NodeJS",
+            imgUrl: mb2,
+            lnk: "https://moviebase-70706.web.app/",
         },
-        {
-            title: "TITLE",
-            desc: "Desgin & Development",
-            imgUrl: bat,
-            lnk: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        }
     ];
 
     return (
@@ -122,17 +107,17 @@ const Projects = () => {
                             <Col sm={3}>
                                 <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center flex-column" id="pills-tab">
                                     <Nav.Item>
-                                        <Nav.Link eventKey="first">Full Stack</Nav.Link>
+                                        <Nav.Link eventKey="first">Personal</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
-                                        <Nav.Link eventKey="second">Display</Nav.Link>
+                                        <Nav.Link eventKey="second">Contest</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
-                                        <Nav.Link eventKey="third">Front End</Nav.Link>
+                                        <Nav.Link eventKey="third">Group</Nav.Link>
                                     </Nav.Item>
                                 </Nav>
                             </Col>
-                            <Col sm={6}>
+                            <Col sm={3}>
                                 <Tab.Content>
                                     <Tab.Pane eventKey="first">
                                         {activeTab === "first" && (
@@ -143,33 +128,14 @@ const Projects = () => {
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="second">
                                         {activeTab === "second" && (
-                                            <div className='cube-cont'>
-                                                <div className='spinner'>
-                                                    <div className='face1'>
-                                                        <ProjectCard {...projects1[0]} />
-                                                    </div>
-                                                    <div className='face2'>
-                                                        <ProjectCard {...projects2[0]} />
-                                                    </div>
-                                                    <div className='face3'>
-                                                        <ProjectCard {...projects2[1]} />
-                                                    </div>
-                                                    <div className='face4'>
-                                                        <ProjectCard {...projects1[1]} />
-                                                    </div>
-                                                    <div className='face5'>
-                                                        <ProjectCard {...projects2[0]} />
-                                                    </div>
-                                                    <div className='face6'>
-                                                        <ProjectCard {...projects2[1]} />
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            projects2.map((project, index) => (
+                                                <Card key={index} {...project} />
+                                            ))
                                         )}
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="third">
                                         {activeTab === "third" && (
-                                            projects2.map((project, index) => (
+                                            projects3.map((project, index) => (
                                                 <Card key={index} {...project} />
                                             ))
                                         )}
