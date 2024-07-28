@@ -8,7 +8,7 @@ import Nav from 'react-bootstrap/Nav';
 import mb from '../assets/images/mb.jpeg';
 import tdl from '../assets/images/todolist.png';
 import darj from '../assets/images/darj.png';
-import mb2 from '../assets/images/mb2.png'
+import nitcnf from '../assets/images/nitconf.png'
 import vitalyze from '../assets/images/vitalyze.png'
 import chatapp from '../assets/images/chatapp.png'
 import scheduler from '../assets/images/sched.png'
@@ -75,20 +75,20 @@ const Projects = () => {
             lnk: "https://mrchr0matic.github.io/darj/",
         },
     ]
-    //Brevidy and nitconf image and overlay
+    //overlay and cube icons
     const projects3 = [
         {
             title: "NITCONF",
             desc: "Conference website for SE Lab'24",
             stack: "React + Spring boot",
-            imgUrl: mb,
+            imgUrl: nitcnf,
             lnk: "https://nitconf.vercel.app/",
         },
         {
             title: "MovieBase",
             desc: "Movie database with ratings",
             stack: "React + NodeJS",
-            imgUrl: mb2,
+            imgUrl: mb,
             lnk: "https://moviebase-70706.web.app/",
         },
     ];

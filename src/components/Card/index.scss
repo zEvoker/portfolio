@@ -38,6 +38,7 @@
         background: rgba(0, 0, 0, 0.4);
         display: flex;
         justify-content: center;
+        align-items: center;
         opacity: 1;
         transition: 0.5s;
         text-align: center;
@@ -48,6 +49,7 @@
             font-weight: 500;
             // line-height: 25px;
             letter-spacing: 1px;
+            margin: 0;
 
             span {
                 font-size: 14px;
